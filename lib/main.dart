@@ -10,7 +10,7 @@ void main() async {
   Hive.init(directory.path);
 
   Hive.registerAdapter(StudentModelAdapter());
-  await Hive.openBox('students');
+  await Hive.openBox<StudentModel>('hivestudents');
 
   runApp(const MyApp());
 }
